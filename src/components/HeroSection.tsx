@@ -81,7 +81,7 @@ export default function HeroSection() {
               {/* Email con mailto y copiar al portapapeles */}
               <motion.button
                 onClick={() => handleEmailClick(personalInfo.email)}
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2 rounded-md bg-transparent border-0 focus:outline-none"
+                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors px-0 py-0 rounded-md bg-transparent border-0 focus:outline-none"
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
                 whileTap={{ scale: 0.95 }}
