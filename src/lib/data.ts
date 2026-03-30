@@ -76,7 +76,7 @@ export const skills = {
 
 export const projects = [
   {
-    title: "PyDaily | Flutter, Firebase",
+    title: "PyDaily - App de aprendizaje de Python | Flutter, Firebase",
     github: "https://github.com/rodex1204/pydaily",
     description: [
       "Aplicación móvil enfocada en el aprendizaje de Python mediante ejercicios diarios interactivos.",
@@ -85,7 +85,7 @@ export const projects = [
     ],
   },
   {
-    title: "Landing Page | HTML, CSS, JavaScript, Bootstrap",
+    title: "Landing Page de videojuegos | HTML, CSS, JavaScript, Bootstrap",
     github: "https://github.com/rodex1204/LandingPage_Videojuegos",
     description: [
       "Landing page informativa sobre videojuegos, diseñada con enfoque en experiencia de usuario.",
@@ -94,16 +94,16 @@ export const projects = [
     ],
   },
   {
-    title: "Aplicación web | Node.js, Firebase, SOA, Docker",
+    title: "Sistema de gestión | Node.js, Express,Firebase (Auth, Firestore), Docker",
     github: "https://github.com/rodex1204/tienda_abarrotes",
     description: [
-      "Sistema web para la gestión de tiendas de abarrotes, permitiendo administrar productos, inventario y ventas.",
-      "Implementación de arquitectura basada en servicios (SOA) con operaciones CRUD y actualización de datos en tiempo real.",
-      "Incluye panel administrativo y vista de usuario, con despliegue utilizando Docker e integración con Firebase.",
+      "Sistema web para la gestión de tiendas de abarrotes, enfocado en la administración de productos, inventario y ventas.",
+      "Desarrollado bajo una arquitectura orientada a servicios (SOA), con implementación de operaciones CRUD y sincronización de datos en tiempo real.",
+      "Cuenta con panel administrativo y vista de usuario, integración de autenticación mediante Firebase Authentication y despliegue utilizando Docker.",
     ],
   },
   {
-    title: "Aplicación web | PHP, MySQL, CSS",
+    title: "Sistema web de información canina | PHP, MySQL, CSS",
     github: "https://github.com/rodex1204/AplicacionWeb_Info-Dog",
     description: [
       "Aplicación web orientada a la consulta de información sobre razas de perros.",
