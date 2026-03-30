@@ -3,7 +3,7 @@
 Este es mi portafolio personal donde muestro mis proyectos, habilidades y experiencia como desarrollador.
 
 ## 🚀 Demo
-https://tu-portafolio.vercel.app
+https://miportafolio-hazel.vercel.app/
 
 ## 🛠 Tecnologías
 - Astro
