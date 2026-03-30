@@ -2,8 +2,22 @@ import { personalInfo } from "@/lib/data";
 import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
+import { useState } from "react";
 
 export default function HeroSection() {
+  const [copied, setCopied] = useState(false);
+
+  const handleEmailClick = (email: string) => {
+    // Intentamos abrir mailto
+    window.location.href = `mailto:${email}`;
+
+    // Copiar al portapapeles como fallback / confirmación
+    navigator.clipboard.writeText(email).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000); // tooltip desaparece en 2s
+    });
+  };
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -64,15 +78,20 @@ export default function HeroSection() {
                 📍 {personalInfo.location}
               </motion.div>
 
-              <motion.a
-                href={`mailto:${personalInfo.email}`}
-                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+              {/* Email con mailto y copiar al portapapeles */}
+              <motion.button
+                onClick={() => handleEmailClick(personalInfo.email)}
+                className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors px-3 py-2 rounded-md bg-gray-100 dark:bg-gray-800"
                 variants={childVariants}
                 whileHover={{ scale: 1.05, color: "#4b5563" }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Mail className="h-4 w-4 mr-2" />
                 ✉️ {personalInfo.email}
-              </motion.a>
+                {copied && (
+                  <span className="ml-2 text-xs text-green-500">copiado!</span>
+                )}
+              </motion.button>
 
               <motion.a
                 href={personalInfo.github}
