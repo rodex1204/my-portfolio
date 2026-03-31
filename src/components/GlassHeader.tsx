@@ -8,6 +8,7 @@ export default function GlassHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   return (
     <header className="sticky z-50 w-full backdrop-blur-md backdrop-filter bg-background/70 dark:bg-background/40 border-b border-border/40 supports-[backdrop-filter]:bg-background/60">
@@ -77,7 +78,12 @@ export default function GlassHeader() {
                     key={item}
                     href={`#${item}`}
                     className="transition-colors hover:text-foreground/80 text-foreground/60 py-2"
-                    onClick={toggleMenu}
+                    onClick={() => {
+                      closeMenu();
+                      setTimeout(() => {
+                        window.location.hash = `#${item}`;
+                      }, 120);
+                    }}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.1 }}
