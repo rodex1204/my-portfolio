@@ -117,4 +117,12 @@
   body {
     @apply bg-background text-foreground;
   }
+  section[id] {
+    scroll-margin-top: 8rem; /* Mobile: deja espacio debajo del header */
+  }
+  @media (min-width: 768px) {
+    section[id] {
+      scroll-margin-top: 0rem; /* Desktop: ajusta mejor si el header es más alto */
+    }
+  }
 }
