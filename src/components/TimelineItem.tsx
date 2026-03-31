@@ -40,15 +40,13 @@ export default function TimelineItem({
           }}
           viewport={{ once: true, margin: "-50px" }}
         />
-        {!isLast && (
-          <motion.div
-            className="w-px grow bg-gradient-to-b from-purple-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"
-            initial={{ height: 0 }}
-            whileInView={{ height: "100%" }}
-            transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
-            viewport={{ once: true, margin: "-50px" }}
-          />
-        )}
+        <motion.div
+          className="w-px grow bg-gradient-to-b from-purple-500/50 to-pink-500/30 dark:from-purple-500/30 dark:to-pink-500/10"
+          initial={{ height: 0 }}
+          whileInView={{ height: "100%" }}
+          transition={{ duration: 0.8, delay: index * 0.2 + 0.3 }}
+          viewport={{ once: true, margin: "-50px" }}
+        />
       </div>
       <div className={cn("pb-8", isLast ? "pb-0" : "")}>
         <motion.div
