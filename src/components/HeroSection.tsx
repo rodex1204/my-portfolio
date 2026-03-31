@@ -3,6 +3,7 @@ import { Mail, Github, MapPin, Linkedin } from "lucide-react";
 import { motion } from "framer-motion";
 import MotionWrapper from "./MotionWrapper";
 import { useState } from "react";
+import { Download } from "lucide-react";
 
 export default function HeroSection() {
   const [copied, setCopied] = useState(false);
@@ -115,6 +116,17 @@ export default function HeroSection() {
               >
                 <Linkedin className="h-4 w-4 mr-2" />
                 🔗 LinkedIn
+              </motion.a>
+              <motion.a
+                href="/CV_JesusAlexisRodriguez.pdf"
+                download
+                className="mt-2 inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-yellow-300 rounded-full shadow-md hover:shadow-lg transition-all duration-300 text-sm font-medium"
+                variants={childVariants}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Download className="h-4 w-4 mr-2" />
+                📄 Descargar CV
               </motion.a>
             </motion.div>
           </div>
